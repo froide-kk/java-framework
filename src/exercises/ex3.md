@@ -3,7 +3,7 @@
 - Domaの初期設定等を完了したch3_1プロジェクトをベースに学習をすすめる
 - 原則DAOスタイルを使用する
 - Selectの実装例とDomaリファレンスを参考にCRUD処理を実装する
-- RestControllerを使用してJSON送ってCRUDする
+- RestControllerを使用してデータ送ってCRUDする
 ```
 curl -X GET "http://localhost:8080/users"
 curl -X POST "http://localhost:8080/users" -F "name=sueoka" -F "password=pass" -F "passwordConfirm=pass"
@@ -13,3 +13,5 @@ curl -X DELETE "http://localhost:8080/users/1"
 - 早期に実装完了したものがいればDSLスタイルで実装してもらう
 
 2. Domaを使用し、画面から登録・参照・更新・削除ができるように実装する
+- 名前検索
+
