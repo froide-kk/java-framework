@@ -27,6 +27,7 @@ public class HelloController {
     @GetMapping
     public String hello(Model model) {
         log.info("hello");
+        log.trace("trace");
         model.addAttribute("name", "world");
         model.addAttribute("userForm", new UserForm());
         return "hello";
