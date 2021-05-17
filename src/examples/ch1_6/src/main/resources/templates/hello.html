@@ -6,16 +6,48 @@
 </head>
 <body>
     <div>
-        Hello [[${name}]]!
+        Hello [[${name}]] !</br>
+        [[${birth}]]   [[${code}]]    [[${address}]]     [[${tel}]]
     </div>
     <br>
     <form th:object="${userForm}" th:action="${action}" id="form1" enctype="multipart/form-data" method="post">
         <div>
-            <label>Name:</label>
             <div>
-                <input type="text" th:type="text" th:field="*{name}" />
+                <div>
+                <label>名前:</label>
+                <input type="text" th:type="text" th:field="*{name}" placeholder="田中　太郎"/></br>
+                    <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</td>
+                </div>
+                <label>パスワード:</label>
+                <input type="text" th:type="text" th:field="*{password}" placeholder="XXX-XXXX"/></br>
+                <td th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Code Error</td>
+                <label>パスワード（確認）:</label>
+                <input type="text" th:type="text" th:field="*{passwordConfirm}" placeholder="XXX-XXXX"/></br>
+                <td th:if="${#fields.hasErrors('passwordConfirm')}" th:errors="*{passwordConfirm}">Code Error</td>
+                <!--<div>
+                <label>生年月日:</label>
+                <input type="text" th:type="text" th:field="*{birth}"  placeholder="YYYY/MM/DD"/></br>
+                    <td th:if="${#fields.hasErrors('birth')}" th:errors="*{birth}" >Birth Error</td>
+                </div>
+                <div>
+                <label>郵便番号:</label>
+                <input type="text" th:type="text" th:field="*{code}" placeholder="XXX-XXXX"/></br>
+                    <td th:if="${#fields.hasErrors('code')}" th:errors="*{code}">Code Error</td>
+                </div>
+                <div>
+                <label>住所:</label>
+                <input type="text" th:type="text" th:field="*{address}" placeholder="福岡県福岡市..."/></br>
+                    <td th:if="${#fields.hasErrors('address')}" th:errors="*{address}">aaaaaaaaaaaa</td>
+                </div>
+                <div>
+                <label>電話番号:</label>
+                <input type="text" th:type="text" th:field="*{tel}" placeholder="000-1234-5678"/></br>
+                    <td th:if="${#fields.hasErrors('tel')}" th:errors="*{tel}" >Tel Error</td>
+                </div>-->
+
+
             </div>
-            <div>
+            <div >
                 <input type="submit" value="Send"/>
             </div>
         </div>

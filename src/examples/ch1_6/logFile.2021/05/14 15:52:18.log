@@ -1,0 +1,6 @@
+2021/05/14 15:52:18 INFO  [main] - Tomcat initialized with port(s): 8080 (http)
+2021/05/14 15:52:18 INFO  [main] - Initializing ProtocolHandler ["http-nio-8080"]
+2021/05/14 15:52:18 INFO  [main] - Starting service [Tomcat]
+2021/05/14 15:52:18 INFO  [main] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021/05/14 15:52:18 INFO  [main] - Initializing Spring embedded WebApplicationContext
+2021/05/14 15:52:18 INFO  [main] - Root WebApplicationContext: initialization completed in 2236 ms

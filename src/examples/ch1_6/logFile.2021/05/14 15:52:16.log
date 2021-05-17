@@ -1,0 +1,3 @@
+2021/05/14 15:52:16 INFO  [main] - Starting Application using Java 11.0.10 on FNDM35.local with PID 47074 (/Users/kazutoshi-asao/Documents/springBoot/java-framework/src/examples/ch1_6/build/classes/java/main started by kazutoshi-asao in /Users/kazutoshi-asao/Documents/springBoot/java-framework/src/examples/ch1_6)
+2021/05/14 15:52:16 INFO  [main] - No active profile set, falling back to default profiles: default
+2021/05/14 15:52:16 INFO  [background-preinit] - HV000001: Hibernate Validator 6.1.7.Final

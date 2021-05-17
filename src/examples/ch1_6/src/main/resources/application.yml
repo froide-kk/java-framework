@@ -1,0 +1,11 @@
+
+spring:
+  messages:
+    basename: messages,ValidationMessages,PropertyNames
+    cache-duration: -1
+    encoding: UTF-8
+
+logging:
+  file: log-file.log
+  level:
+    org.springframework.web: INFO

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>アンケート[[${ans}]]</title>
+</head>
+<body>
+    <h1>アンケート</h1>
+
+    <form th:object="${form}" th:action="@{answer}" id ="form2" enctype="multipart/form-data" method="post">
+        <div>
+            <p>問１：　犬派？猫派？</p>
+            <tr th:each="kinds:${kind}">
+            <input type="radio" name="selectedRadio" th:value　="${kinds.key}" th:text="${kinds.value}" th:field="*{selectedRadio}">
+            </tr>
+            <!--<p>問２：　どちらでもないと答えた方へ</p>
+            <p>何派ですか？</p>
+            <input type="text" th:type="text" th:field="*{anyAnimal}"></br>
+            <td th:if="${fields.hasErrors('anyAnimal')}" th:errors="*{anyAnimal}">Animal Error</td>-->
+            <label>パスワード:</label>
+            <input type="text" th:type="text" th:field="*{password}" placeholder="XXX-XXXX"/></br>
+            <td th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Code Error</td>
+            <label>パスワード（確認）:</label>
+            <input type="text" th:type="text" th:field="*{passwordConfirm}" placeholder="XXX-XXXX"/></br>
+            <p>[[${passwordConfirm}]]</p>
+            <td th:if="${status}" th:errors="*{passwordConfirm}">Code Error</td>
+
+        </div>
+        <div><input type="submit" value="Send" /></div>
+    </form>
+
+
+</body>
+</html>
