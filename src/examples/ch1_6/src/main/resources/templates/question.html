@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+</head>
+<body>
+
+    <div>アンケート結果</div>
+    <div>
+        氏名 [[${name}]] <br>
+        誕生日 [[${birthday}]] <br>
+        郵便番号 [[${postalcode}]] <br>
+        住所 [[${address}]] <br>
+        電話番号 [[${tel}]] <br>
+    </div>
+    <div>犬派？猫派？</div>
+    <!--<div>[[${animal}]]!</div>-->
+
+    <form th:object="${userForm}" action="/send" id="form1" enctype="multipart/form-data" method="post">
+        <div>
+            <input type="radio" th:field="*{animal}" value="犬" checked="checked">犬派
+            <input type="radio" th:field="*{animal}" value="猫">猫派
+        </div>
+        <div>
+            <input type="submit" value="決定"/>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,5 @@
+spring:
+  messages:
+    basename: i18n/application-messages, ValidationMessages, PropaertyNames
+    cache-duration: -1
+    encoding: UTF-8
