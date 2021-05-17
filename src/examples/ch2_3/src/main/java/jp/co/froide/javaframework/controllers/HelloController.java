@@ -29,6 +29,7 @@ public class HelloController {
         log.info("hello");
         model.addAttribute("name", "world");
         model.addAttribute("userForm", new UserForm());
+//        log.error("");
         return "hello";
     }
 
