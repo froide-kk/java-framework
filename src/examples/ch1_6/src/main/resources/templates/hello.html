@@ -7,14 +7,51 @@
 <body>
     <div>
         Hello [[${name}]]!
+        [[${birth}]]
+        [[${post_code}]]
+        [[${address}]]
+        [[${tel}]]
     </div>
     <br>
     <form th:object="${userForm}" th:action="${action}" id="form1" enctype="multipart/form-data" method="post">
         <div>
-            <label>Name:</label>
+            <label>氏名:</label>
             <div>
-                <input type="text" th:type="text" th:field="*{name}" />
+                <input type="text" th:type="text" th:field="*{name}" /><br>
+                <div th:if="${#fields.hasErrors('name')}">Massage:Error</div>
             </div>
+            <label>誕生日:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{birth}" /><br>
+                <div th:if="${#fields.hasErrors('birth')}">Massage:Error</div>
+            </div>
+            <label>郵便番号:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{post_code}" /><br>
+                <div th:if="${#fields.hasErrors('post_code')}">Massage:Error</div>
+            </div>
+            <label>住所:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{address}" /><br>
+                <div th:if="${#fields.hasErrors('address')}">Massage:Error</div>
+            </div>
+            <label>電話番号:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{tel}" /><br>
+                <div th:if="${#fields.hasErrors('tel')}">Massage:Error</div>
+            </div>
+            <label>パスワード:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{password}" /><br>
+                <div th:each="error : ${#fields.errors('password')}"></div>
+            </div>
+            <label>パスワード再入力:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{reenterPassword}" /><br>
+                <div th:each="error : ${#fields.errors('reenterPassword')}">
+                <div th:text="${error}"></div></div>
+            </div>
+
             <div>
                 <input type="submit" value="Send"/>
             </div>
