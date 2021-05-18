@@ -1,6 +1,6 @@
 spring:
   messages:
-    basename: 18n/application-messages
+    basename: i18n/application-messages, ValidationMessages
     cache-duration: -1
     encoding: UTF-8
   datasource:

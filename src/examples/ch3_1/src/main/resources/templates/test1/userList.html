@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>リスト</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>pass</th>
+            <th></th>
+        </tr>
+        <tr th:each="user:${userList}" th:object="${user}">
+            <td th:text="*{id}"></td>
+            <td th:text="*{name}"></td>
+            <td th:text="*{password}"></td>
+            <td ><a th:href="@{/users/detail/{id}(id=*{id})}">詳細表示</a></td>
+        </tr>
+    </table>
+    <a th:href="@{/users/post}">登録画面</a>
+</body>
+</html>
