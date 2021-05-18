@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <h1>食生活に関するアンケート</h1>
+    </div>
+
+    <br>
+    <form th:object="${userForm}" th:action="${action}" id="form1" enctype="multipart/form-data" method="post">
+        <div>
+            <label>名前:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{name}" />
+            </div>
+        </div>
+        <div>
+            <label>生年月日:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{birthday}" />
+            </div>
+        </div>
+        <div>
+            <label>郵便番号:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{postaddress}" />
+            </div>
+        </div>
+        <div>
+            <label>住所:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{address}" />
+            </div>
+        </div>
+        <div>
+            <label>電話番号:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{number}" />
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Send"/>
+        </div>
+    </form>
+</body>
+</html>

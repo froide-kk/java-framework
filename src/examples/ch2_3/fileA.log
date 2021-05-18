@@ -1,0 +1,171 @@
+2021/05/14 16:07:12 INFO  [background-preinit] - HV000001: Hibernate Validator 6.1.7.Final
+2021/05/14 16:07:12 INFO  [main] - Starting Application using Java 11.0.11 on FNDM61.local with PID 40508 (/Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3/build/classes/java/main started by rio-ikeda in /Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3)
+2021/05/14 16:07:12 INFO  [main] - No active profile set, falling back to default profiles: default
+2021/05/14 16:07:14 INFO  [main] - Tomcat initialized with port(s): 8080 (http)
+2021/05/14 16:07:14 INFO  [main] - Initializing ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:07:14 INFO  [main] - Starting service [Tomcat]
+2021/05/14 16:07:14 INFO  [main] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021/05/14 16:07:14 INFO  [main] - Initializing Spring embedded WebApplicationContext
+2021/05/14 16:07:14 INFO  [main] - Root WebApplicationContext: initialization completed in 2037 ms
+2021/05/14 16:07:15 INFO  [main] - Initializing ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:07:15 INFO  [main] - Starting ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:07:15 INFO  [main] - Tomcat started on port(s): 8080 (http) with context path ''
+2021/05/14 16:07:15 INFO  [main] - Started Application in 4.215 seconds (JVM running for 5.173)
+2021/05/14 16:08:15 INFO  [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/05/14 16:08:15 INFO  [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2021/05/14 16:08:15 INFO  [http-nio-8080-exec-1] - Completed initialization in 2 ms
+2021/05/14 16:08:15 INFO  [http-nio-8080-exec-1] - hello
+2021/05/14 16:08:19 INFO  [http-nio-8080-exec-2] - validated: false, userForm: {"name":"","password":"","passwordConfirm":""}
+2021/05/14 16:12:11 INFO  [SpringContextShutdownHook] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:12:15 INFO  [main] - Starting Application using Java 11.0.11 on FNDM61.local with PID 40874 (/Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3/build/classes/java/main started by rio-ikeda in /Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3)
+2021/05/14 16:12:15 INFO  [background-preinit] - HV000001: Hibernate Validator 6.1.7.Final
+2021/05/14 16:12:15 INFO  [main] - No active profile set, falling back to default profiles: default
+2021/05/14 16:12:17 INFO  [main] - Tomcat initialized with port(s): 8080 (http)
+2021/05/14 16:12:17 INFO  [main] - Initializing ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:12:17 INFO  [main] - Starting service [Tomcat]
+2021/05/14 16:12:17 INFO  [main] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021/05/14 16:12:17 INFO  [main] - Initializing Spring embedded WebApplicationContext
+2021/05/14 16:12:17 INFO  [main] - Root WebApplicationContext: initialization completed in 1772 ms
+2021/05/14 16:12:17 INFO  [main] - Initializing ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:12:17 INFO  [main] - Starting ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:12:17 INFO  [main] - Tomcat started on port(s): 8080 (http) with context path ''
+2021/05/14 16:12:17 INFO  [main] - Started Application in 3.598 seconds (JVM running for 4.381)
+2021/05/14 16:13:19 INFO  [SpringContextShutdownHook] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:13:24 INFO  [main] - Starting Application using Java 11.0.11 on FNDM61.local with PID 40892 (/Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3/build/classes/java/main started by rio-ikeda in /Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3)
+2021/05/14 16:13:24 INFO  [background-preinit] - HV000001: Hibernate Validator 6.1.7.Final
+2021/05/14 16:13:24 INFO  [main] - No active profile set, falling back to default profiles: default
+2021/05/14 16:13:26 INFO  [main] - Tomcat initialized with port(s): 8080 (http)
+2021/05/14 16:13:26 INFO  [main] - Initializing ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:13:26 INFO  [main] - Starting service [Tomcat]
+2021/05/14 16:13:26 INFO  [main] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021/05/14 16:13:26 INFO  [main] - Initializing Spring embedded WebApplicationContext
+2021/05/14 16:13:26 INFO  [main] - Root WebApplicationContext: initialization completed in 1956 ms
+2021/05/14 16:13:26 INFO  [main] - Initializing ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:13:27 INFO  [main] - Starting ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:13:27 INFO  [main] - Tomcat started on port(s): 8080 (http) with context path ''
+2021/05/14 16:13:27 INFO  [main] - Started Application in 3.862 seconds (JVM running for 4.794)
+2021/05/14 16:14:25 INFO  [SpringContextShutdownHook] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:14:30 INFO  [background-preinit] - HV000001: Hibernate Validator 6.1.7.Final
+2021/05/14 16:14:30 INFO  [main] - Starting Application using Java 11.0.11 on FNDM61.local with PID 40905 (/Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3/build/classes/java/main started by rio-ikeda in /Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3)
+2021/05/14 16:14:30 INFO  [main] - No active profile set, falling back to default profiles: default
+2021/05/14 16:14:32 INFO  [main] - Tomcat initialized with port(s): 8080 (http)
+2021/05/14 16:14:32 INFO  [main] - Initializing ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:14:32 INFO  [main] - Starting service [Tomcat]
+2021/05/14 16:14:32 INFO  [main] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021/05/14 16:14:32 INFO  [main] - Initializing Spring embedded WebApplicationContext
+2021/05/14 16:14:32 INFO  [main] - Root WebApplicationContext: initialization completed in 1700 ms
+2021/05/14 16:14:32 INFO  [main] - Initializing ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:14:33 INFO  [main] - Starting ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:14:33 INFO  [main] - Tomcat started on port(s): 8080 (http) with context path ''
+2021/05/14 16:14:33 INFO  [main] - Started Application in 3.411 seconds (JVM running for 4.733)
+2021/05/14 16:19:26 INFO  [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/05/14 16:19:26 INFO  [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2021/05/14 16:19:26 INFO  [http-nio-8080-exec-1] - Completed initialization in 3 ms
+2021/05/14 16:19:26 INFO  [http-nio-8080-exec-1] - hello
+2021/05/14 16:19:56 INFO  [SpringContextShutdownHook] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:20:02 INFO  [main] - Starting Application using Java 11.0.11 on FNDM61.local with PID 41017 (/Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3/build/classes/java/main started by rio-ikeda in /Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3)
+2021/05/14 16:20:02 INFO  [main] - No active profile set, falling back to default profiles: default
+2021/05/14 16:20:02 INFO  [background-preinit] - HV000001: Hibernate Validator 6.1.7.Final
+2021/05/14 16:20:04 INFO  [main] - Tomcat initialized with port(s): 8080 (http)
+2021/05/14 16:20:04 INFO  [main] - Initializing ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:20:04 INFO  [main] - Starting service [Tomcat]
+2021/05/14 16:20:04 INFO  [main] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021/05/14 16:20:04 INFO  [main] - Initializing Spring embedded WebApplicationContext
+2021/05/14 16:20:04 INFO  [main] - Root WebApplicationContext: initialization completed in 1525 ms
+2021/05/14 16:20:04 INFO  [main] - Initializing ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:20:04 INFO  [main] - Starting ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:20:04 INFO  [main] - Tomcat started on port(s): 8080 (http) with context path ''
+2021/05/14 16:20:04 INFO  [main] - Started Application in 3.216 seconds (JVM running for 4.084)
+2021/05/14 16:20:39 INFO  [SpringContextShutdownHook] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:20:45 INFO  [background-preinit] - HV000001: Hibernate Validator 6.1.7.Final
+2021/05/14 16:20:45 INFO  [main] - Starting Application using Java 11.0.11 on FNDM61.local with PID 41136 (/Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3/build/classes/java/main started by rio-ikeda in /Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3)
+2021/05/14 16:20:45 INFO  [main] - No active profile set, falling back to default profiles: default
+2021/05/14 16:20:47 INFO  [main] - Tomcat initialized with port(s): 8080 (http)
+2021/05/14 16:20:47 INFO  [main] - Initializing ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:20:47 INFO  [main] - Starting service [Tomcat]
+2021/05/14 16:20:47 INFO  [main] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021/05/14 16:20:47 INFO  [main] - Initializing Spring embedded WebApplicationContext
+2021/05/14 16:20:47 INFO  [main] - Root WebApplicationContext: initialization completed in 2361 ms
+2021/05/14 16:20:48 INFO  [main] - Initializing ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:20:48 INFO  [main] - Starting ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:20:48 INFO  [main] - Tomcat started on port(s): 8080 (http) with context path ''
+2021/05/14 16:20:48 INFO  [main] - Started Application in 4.825 seconds (JVM running for 5.909)
+2021/05/14 16:21:13 INFO  [SpringContextShutdownHook] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:21:18 INFO  [main] - Starting Application using Java 11.0.11 on FNDM61.local with PID 41233 (/Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3/build/classes/java/main started by rio-ikeda in /Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3)
+2021/05/14 16:21:18 INFO  [background-preinit] - HV000001: Hibernate Validator 6.1.7.Final
+2021/05/14 16:21:18 INFO  [main] - No active profile set, falling back to default profiles: default
+2021/05/14 16:21:20 INFO  [main] - Tomcat initialized with port(s): 8080 (http)
+2021/05/14 16:21:20 INFO  [main] - Initializing ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:21:20 INFO  [main] - Starting service [Tomcat]
+2021/05/14 16:21:20 INFO  [main] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021/05/14 16:21:20 INFO  [main] - Initializing Spring embedded WebApplicationContext
+2021/05/14 16:21:20 INFO  [main] - Root WebApplicationContext: initialization completed in 1932 ms
+2021/05/14 16:21:20 INFO  [main] - Initializing ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:21:21 INFO  [main] - Starting ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:21:21 INFO  [main] - Tomcat started on port(s): 8080 (http) with context path ''
+2021/05/14 16:21:21 INFO  [main] - Started Application in 4.138 seconds (JVM running for 5.677)
+2021/05/14 16:36:20 INFO  [SpringContextShutdownHook] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:36:26 INFO  [main] - Starting Application using Java 11.0.11 on FNDM61.local with PID 41613 (/Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3/build/classes/java/main started by rio-ikeda in /Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3)
+2021/05/14 16:36:26 INFO  [background-preinit] - HV000001: Hibernate Validator 6.1.7.Final
+2021/05/14 16:36:26 INFO  [main] - No active profile set, falling back to default profiles: default
+2021/05/14 16:36:27 INFO  [main] - Tomcat initialized with port(s): 8080 (http)
+2021/05/14 16:36:27 INFO  [main] - Initializing ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:36:27 INFO  [main] - Starting service [Tomcat]
+2021/05/14 16:36:27 INFO  [main] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021/05/14 16:36:27 INFO  [main] - Initializing Spring embedded WebApplicationContext
+2021/05/14 16:36:27 INFO  [main] - Root WebApplicationContext: initialization completed in 1749 ms
+2021/05/14 16:36:28 INFO  [main] - Initializing ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:36:28 INFO  [main] - Starting ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:36:28 INFO  [main] - Tomcat started on port(s): 8080 (http) with context path ''
+2021/05/14 16:36:28 INFO  [main] - Started Application in 3.691 seconds (JVM running for 5.091)
+2021/05/14 16:36:44 INFO  [SpringContextShutdownHook] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:36:49 INFO  [background-preinit] - HV000001: Hibernate Validator 6.1.7.Final
+2021/05/14 16:36:49 INFO  [main] - Starting Application using Java 11.0.11 on FNDM61.local with PID 41622 (/Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3/build/classes/java/main started by rio-ikeda in /Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3)
+2021/05/14 16:36:49 INFO  [main] - No active profile set, falling back to default profiles: default
+2021/05/14 16:36:51 INFO  [main] - Tomcat initialized with port(s): 8080 (http)
+2021/05/14 16:36:51 INFO  [main] - Initializing ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:36:51 INFO  [main] - Starting service [Tomcat]
+2021/05/14 16:36:51 INFO  [main] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021/05/14 16:36:51 INFO  [main] - Initializing Spring embedded WebApplicationContext
+2021/05/14 16:36:51 INFO  [main] - Root WebApplicationContext: initialization completed in 1737 ms
+2021/05/14 16:36:51 INFO  [main] - Initializing ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:36:52 INFO  [main] - Starting ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:36:52 INFO  [main] - Tomcat started on port(s): 8080 (http) with context path ''
+2021/05/14 16:36:52 INFO  [main] - Started Application in 3.599 seconds (JVM running for 5.092)
+2021/05/14 16:37:15 INFO  [SpringContextShutdownHook] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:37:20 INFO  [background-preinit] - HV000001: Hibernate Validator 6.1.7.Final
+2021/05/14 16:37:20 INFO  [main] - Starting Application using Java 11.0.11 on FNDM61.local with PID 41634 (/Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3/build/classes/java/main started by rio-ikeda in /Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3)
+2021/05/14 16:37:20 INFO  [main] - No active profile set, falling back to default profiles: default
+2021/05/14 16:37:23 INFO  [main] - Tomcat initialized with port(s): 8080 (http)
+2021/05/14 16:37:23 INFO  [main] - Initializing ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:37:23 INFO  [main] - Starting service [Tomcat]
+2021/05/14 16:37:23 INFO  [main] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021/05/14 16:37:23 INFO  [main] - Initializing Spring embedded WebApplicationContext
+2021/05/14 16:37:23 INFO  [main] - Root WebApplicationContext: initialization completed in 2499 ms
+2021/05/14 16:37:24 INFO  [main] - Initializing ExecutorService 'applicationTaskExecutor'
+2021/05/14 16:37:25 INFO  [main] - Starting ProtocolHandler ["http-nio-8080"]
+2021/05/14 16:37:25 INFO  [main] - Tomcat started on port(s): 8080 (http) with context path ''
+2021/05/14 16:37:25 INFO  [main] - Started Application in 6.65 seconds (JVM running for 8.016)
+2021/05/14 17:15:40 INFO  [SpringContextShutdownHook] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021/05/14 17:15:46 INFO  [main] - Starting Application using Java 11.0.11 on FNDM61.local with PID 43110 (/Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3/build/classes/java/main started by rio-ikeda in /Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch2_3)
+2021/05/14 17:15:46 INFO  [main] - No active profile set, falling back to default profiles: default
+2021/05/14 17:15:46 INFO  [background-preinit] - HV000001: Hibernate Validator 6.1.7.Final
+2021/05/14 17:15:48 INFO  [main] - Tomcat initialized with port(s): 8080 (http)
+2021/05/14 17:15:48 INFO  [main] - Initializing ProtocolHandler ["http-nio-8080"]
+2021/05/14 17:15:48 INFO  [main] - Starting service [Tomcat]
+2021/05/14 17:15:48 INFO  [main] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021/05/14 17:15:49 INFO  [main] - Initializing Spring embedded WebApplicationContext
+2021/05/14 17:15:49 INFO  [main] - Root WebApplicationContext: initialization completed in 2305 ms
+2021/05/14 17:15:49 INFO  [main] - Initializing ExecutorService 'applicationTaskExecutor'
+2021/05/14 17:15:49 INFO  [main] - Starting ProtocolHandler ["http-nio-8080"]
+2021/05/14 17:15:49 INFO  [main] - Tomcat started on port(s): 8080 (http) with context path ''
+2021/05/14 17:15:50 INFO  [main] - Started Application in 4.776 seconds (JVM running for 6.018)
+2021/05/14 17:16:03 INFO  [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/05/14 17:16:03 INFO  [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2021/05/14 17:16:03 INFO  [http-nio-8080-exec-1] - Completed initialization in 0 ms
+2021/05/14 17:16:03 INFO  [http-nio-8080-exec-1] - hello
+2021/05/14 17:16:08 INFO  [http-nio-8080-exec-2] - validated: false, userForm: {"name":"","password":"","passwordConfirm":""}
+2021/05/14 17:16:25 INFO  [http-nio-8080-exec-3] - hello
+2021/05/14 17:16:41 INFO  [http-nio-8080-exec-4] - validated: false, userForm: {"name":"池田","password":"julho","passwordConfirm":"julho"}
+2021/05/14 17:17:22 INFO  [http-nio-8080-exec-6] - hello
+2021/05/14 18:03:26 INFO  [SpringContextShutdownHook] - Shutting down ExecutorService 'applicationTaskExecutor'

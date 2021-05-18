@@ -5,19 +5,70 @@
     <title>Hello World!</title>
 </head>
 <body>
-    <div>
-        Hello [[${name}]]!
-    </div>
+<!--    <div>-->
+<!--        Hello [[${name}]]!-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        [[${birthday}]]-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        [[${postaddress}]]-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        [[${address}]]-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        [[${number}]]-->
+<!--    </div>-->
     <br>
     <form th:object="${userForm}" th:action="${action}" id="form1" enctype="multipart/form-data" method="post">
         <div>
-            <label>Name:</label>
+            <label>名前:</label>
             <div>
                 <input type="text" th:type="text" th:field="*{name}" />
             </div>
-            <div>
-                <input type="submit" value="Send"/>
+            <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}">
+                [[${name}]]
             </div>
+        </div>
+        <div>
+            <label>誕生日:</label>
+            <div>
+                <input th:type="date" th:field="*{birthday}" />
+            </div>
+            <div th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}">
+                [[${birthday}]]
+            </div>
+        </div>
+        <div>
+            <label>郵便番号:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{postaddress}" />
+            </div>
+            <div th:if="${#fields.hasErrors('postaddress')}" th:errors="*{postaddress}">
+                [[${postaddress}]]
+            </div>
+        </div>
+        <div>
+            <label>住所:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{address}" />
+            </div>
+            <div th:if="${#fields.hasErrors('address')}" th:errors="*{address}">
+                [[${address}]]
+            </div>
+        </div>
+        <div>
+            <label>電話番号:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{number}" />
+            </div>
+            <div th:if="${#fields.hasErrors('number')}" th:errors="*{number}">
+                [[${number}]]
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Send"/>
         </div>
     </form>
 </body>
