@@ -56,7 +56,12 @@ public class ItemController {
         model.addAttribute("item",item);
         model.addAttribute("id",id);
         if (!model.containsAttribute("error")) {
-            model.addAttribute("form", new ItemForm());
+            ItemForm form = new ItemForm();
+            form.setName(item.getName());
+            form.setPrice(item.getPrice());
+            form.setReleaseDate(item.getReleaseDate());
+            form.setImageURL(item.getImageURL());
+            model.addAttribute("form", form);
         }
 
         return "test2/putItem";

@@ -10,15 +10,24 @@
             <th>id</th>
             <th>name</th>
             <th>pass</th>
-            <th></th>
+            <th>更新</th>
+            <th>削除</th>
         </tr>
         <tr th:each="user:${userList}" th:object="${user}">
             <td th:text="*{id}"></td>
             <td th:text="*{name}"></td>
             <td th:text="*{password}"></td>
             <td ><a th:href="@{/users/detail/{id}(id=*{id})}">詳細表示</a></td>
+            <td>
+                <a th:href="@{/users/update/{id}(id = *{id})}">更新する</a>
+            </td>
+            <td>
+                <form th:action="@{/users/delete/{id}(id = *{id})}" method="post">
+                    <input type="submit" value="delete">
+                </form>
+            </td>
         </tr>
     </table>
-    <a th:href="@{/users/post}">登録画面</a>
+    <a th:href="@{/users/post}">新規登録</a>
 </body>
 </html>

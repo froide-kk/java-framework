@@ -1,9 +1,21 @@
 package jp.co.froide.javaframework.controller;
 
+import jp.co.froide.javaframework.DbConfig;
 import jp.co.froide.javaframework.dao.UserDao;
+
+import jp.co.froide.javaframework.dsl.UserDsl;
+import jp.co.froide.javaframework.entiDSL.UserEntity;
 import jp.co.froide.javaframework.entity.User;
 import jp.co.froide.javaframework.form.UserForm;
 import jp.co.froide.javaframework.form.UserFormValidator;
+import org.seasar.doma.jdbc.Config;
+import org.seasar.doma.jdbc.JdbcLogger;
+import org.seasar.doma.jdbc.Slf4jJdbcLogger;
+import org.seasar.doma.jdbc.dialect.Dialect;
+import org.seasar.doma.jdbc.dialect.H2Dialect;
+import org.seasar.doma.jdbc.tx.LocalTransactionDataSource;
+import org.seasar.doma.jdbc.tx.LocalTransactionManager;
+import org.seasar.doma.jdbc.tx.TransactionManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.Conventions;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +26,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -26,6 +39,9 @@ public class UserController {
 
     @InitBinder("userForm")
     public void validatorBinder(WebDataBinder webDataBinder){ webDataBinder.addValidators(userFormValidator);}
+
+    Config config = createConfig();
+    TransactionManager tm = config.getTransactionManager();
 
 
     @GetMapping(value = "/users/post")
@@ -42,17 +58,24 @@ public class UserController {
 
     @GetMapping(value = "/users/list")
     public String userList(Model model) {
-        List<User> userList = userDao.selectAll();
-        model.addAttribute("userList", userList);
-
+        tm.required(
+                () -> {
+                    UserDsl userDsl = new UserDsl(config);
+                    List<UserEntity> userList = userDsl.selectAll();
+                    model.addAttribute("userList", userList);
+                });
+        System.out.println(model);
         return "test1/userList";
     }
 
     @GetMapping(value="/users/detail/{id}")
     public String userDetail(Model model, @PathVariable("id") Integer id){
-        User user = userDao.selectById(id);
-        model.addAttribute("user", user);
-        System.out.println(user.getName());
+        tm.required(
+                () -> {
+                    UserDsl userDsl = new UserDsl(config);
+                    UserEntity user = userDsl.selectedById(id);
+                    model.addAttribute("user", user);
+                });
         return "test1/userDetail";
     }
 
@@ -78,10 +101,15 @@ public class UserController {
             System.out.println(result);
             return "redirect:/users/post";
         }
-        User user = new User();
+        UserEntity user = new UserEntity();
         user.setName(form.getName());
         user.setPassword(form.getPassword());
-        userDao.insert(user);
+
+        tm.required(
+                () -> {
+                    UserDsl userDsl = new UserDsl(config);
+                    userDsl.insert(user);
+                });
 
         return "redirect:/users/list";
     }
@@ -98,11 +126,17 @@ public class UserController {
             return "redirect:/users/update/{id}";
         }
 
-        User user = new User();
+        UserEntity user = new UserEntity();
         user.setId(id);
         user.setName(form.getName());
         user.setPassword(form.getPassword());
-        userDao.update(user);
+
+        tm.required(
+                ()->{
+                    UserDsl userDsl = new UserDsl(config);
+                    userDsl.update(user);
+                }
+        );
         System.out.println(id);
 
         return "redirect:/users/detail/{id}";
@@ -112,11 +146,23 @@ public class UserController {
     @PostMapping(value = "/users/delete/{id}")
     public String deleteUser(@PathVariable("id") Integer id){
 
-        User user = userDao.selectById(id);
-        System.out.println(user);
-        userDao.delete(user);
+        tm.required(
+                () -> {
+                    UserDsl userDsl = new UserDsl(config);
+                    UserEntity user = userDsl.selectedById(id);
+                    userDsl.delete(user);
+                });
         return "redirect:/users/list";
 
+    }
+
+    private static Config createConfig() {
+        Dialect dialect = new H2Dialect();
+        LocalTransactionDataSource dataSource =
+                new LocalTransactionDataSource("jdbc:mysql://localhost:33306/javaframework", "root", "root");
+        JdbcLogger jdbcLogger = new Slf4jJdbcLogger();
+        TransactionManager transactionManager = new LocalTransactionManager(dataSource, jdbcLogger);
+        return new DbConfig(dialect, dataSource, jdbcLogger, transactionManager);
     }
 
 

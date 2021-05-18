@@ -22,6 +22,7 @@ public interface UserDao {
     @Select
     List<User> selectAll();
 
+
     @Sql("select /*%expand*/* from user where id = /* id */0")
     @Select
     User selectById(Integer id);
