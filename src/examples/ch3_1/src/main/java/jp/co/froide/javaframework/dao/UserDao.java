@@ -18,7 +18,8 @@ public interface UserDao {
         return builder.getScalarSingleResult(int.class);
     }
 
-    @Sql("select /*%expand*/* from user")
+    // /*%expand*/*
+    @Sql("select * from user")
     @Select
     List<User> selectAll();
 

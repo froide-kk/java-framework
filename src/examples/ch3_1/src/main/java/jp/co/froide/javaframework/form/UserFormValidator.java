@@ -14,8 +14,9 @@ public class UserFormValidator implements Validator {
     @Override
     public void validate(Object target, Errors errors) {
         UserForm userForm = (UserForm) target;
-        if (userForm.getPassword().equals(userForm.getPasswordConfirm())) {
+        if (!userForm.getPassword().equals(userForm.getPasswordConfirm())) {
             errors.rejectValue("passwordConfirm", "UserFormValidator.userForm.passwordConfirm");
         }
+
     }
 }

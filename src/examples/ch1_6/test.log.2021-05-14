@@ -1,0 +1,19 @@
+2021/5月/14 16:21:24 INFO  [main] - Starting Application using Java 11.0.11 on FNDM13.local with PID 31464 (/Users/yudai-nagayoshi/Documents/java-framework/src/examples/ch1_6/build/classes/java/main started by yudai-nagayoshi in /Users/yudai-nagayoshi/Documents/java-framework/src/examples/ch1_6)
+2021/5月/14 16:21:24 INFO  [background-preinit] - HV000001: Hibernate Validator 6.1.7.Final
+2021/5月/14 16:21:24 INFO  [main] - No active profile set, falling back to default profiles: default
+2021/5月/14 16:21:26 INFO  [main] - Tomcat initialized with port(s): 8080 (http)
+2021/5月/14 16:21:26 INFO  [main] - Initializing ProtocolHandler ["http-nio-8080"]
+2021/5月/14 16:21:26 INFO  [main] - Starting service [Tomcat]
+2021/5月/14 16:21:26 INFO  [main] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021/5月/14 16:21:26 INFO  [main] - Initializing Spring embedded WebApplicationContext
+2021/5月/14 16:21:26 INFO  [main] - Root WebApplicationContext: initialization completed in 2256 ms
+2021/5月/14 16:21:26 INFO  [main] - Initializing ExecutorService 'applicationTaskExecutor'
+2021/5月/14 16:21:27 INFO  [main] - Starting ProtocolHandler ["http-nio-8080"]
+2021/5月/14 16:21:27 INFO  [main] - Tomcat started on port(s): 8080 (http) with context path ''
+2021/5月/14 16:21:27 INFO  [main] - Started Application in 4.382 seconds (JVM running for 5.252)
+2021/5月/14 16:21:45 INFO  [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/5月/14 16:21:45 INFO  [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2021/5月/14 16:21:45 INFO  [http-nio-8080-exec-1] - Completed initialization in 1 ms
+2021/5月/14 16:21:45 INFO  [http-nio-8080-exec-1] - logloglogloglog
+2021/5月/14 16:24:47 INFO  [http-nio-8080-exec-4] - logloglogloglog
+2021/5月/14 16:24:48 INFO  [http-nio-8080-exec-5] - logloglogloglog

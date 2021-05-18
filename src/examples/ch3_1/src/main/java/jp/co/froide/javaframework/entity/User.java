@@ -1,5 +1,7 @@
 package jp.co.froide.javaframework.entity;
 
+import jp.co.froide.javaframework.dao.UserDao;
+import jp.co.froide.javaframework.form.UserForm;
 import lombok.Getter;
 import lombok.Setter;
 import org.seasar.doma.*;
@@ -14,4 +16,5 @@ public class User {
     Integer id;
     String name;
     String password;
+
 }

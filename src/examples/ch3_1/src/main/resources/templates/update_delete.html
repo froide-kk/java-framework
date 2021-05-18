@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>データベース変更＆削除</h1>
+
+    <form th:object="${userForm}" th:action="${action}" id="form3" enctype="multipart/form-data" method="post">
+        <div>
+            <div>ID</div>
+            <input type="text" th:type="text" th:field="*{id}">
+        </div>
+        <div>
+            <div>名前</div>
+            <input type="text" th:type="text" th:field="*{name}">
+            <div th:if="${#fields.hasErrors('name')}"></div>
+        </div>
+        <div>
+            <div>パスワード</div>
+            <input  type="text" th:type="text" th:field="*{password}">
+            <div th:each="error : ${#fields.errors('password')}"></div>
+        </div>
+        <div>
+            <div>パスワード再入力</div>
+            <input type="text" th:type="text" th:field="*{passwordConfirm}"><br>
+            <div th:each="error : ${#fields.errors('passwordConfirm')}">[[${error}]]</div>
+        </div>
+        <div>
+            <input type="submit" th:type="submit" name="update" value="更新">
+            <input type="submit" th:type="submit" name="delete" value="削除">
+        </div>
+
+        <div>
+            <h2>結果</h2>
+            [[${update}]]
+            [[${delete}]]
+        </div>
+        <a href="index.html">一覧</a>
+    </form>
+</body>
+</html>
