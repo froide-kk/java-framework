@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <style>
+        .submit{
+            display:flex;
+        }
+    </style>
+</head>
+<body>
+<script>
+
+</script>
+
+<div>
+    <h2 id="title">編集ページ</h2>
+    <form th:object="${userEditForm}" th:action="${action}" id="form2" enctype="multipart/form-data" method="post">
+        <div>
+            <label>ID:</label>
+            <div>
+                <input type="number" th:type="number" th:field="*{id}"/>
+            </div>
+            <label>Name:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{name}"/>
+                <ul th:each="error : ${#fields.errors('name')}">
+                    <li th:text="${error}"></li>
+                </ul>
+            </div>
+            <label>Password:</label>
+            <div>
+                <input type="password" th:type="password" th:field="*{password}"/>
+                <ul th:each="error : ${#fields.errors('password')}">
+                    <li th:text="${error}"></li>
+                </ul>
+            </div>
+            <label>Password Confirm:</label>
+            <div>
+                <input type="password" th:type="password" th:field="*{passwordConfirm}"/>
+                <ul th:each="error : ${#fields.errors('passwordConfirm')}">
+                    <li th:text="${error}"></li>
+                </ul>
+            </div>
+            <div class="submit">
+            <div>
+                <input type="submit" name="submit" th:value="更新"/>
+            </div>
+            <div>
+                <input type="submit" name="submit" th:value="削除"/>
+            </div>
+            </div>
+        </div>
+    </form>
+
+</div>
+</body>
+
+</html>

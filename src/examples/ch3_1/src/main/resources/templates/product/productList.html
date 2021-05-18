@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <style>
+        body{
+            margin:50px
+        }
+            table,tr,th,td{
+            border: 2px #000000 solid;
+        }
+        .wrapper{
+            display: flex;
+            justify-content: center;
+            flex-direction:column-reverse;
+        }
+        .createUser{
+            display: flex;
+            margin:30px;
+            justify-content: flex-end;
+        }
+        .productImage{
+            max-width:100px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="createProduct">
+    <a href="http://localhost:8080/product/create">商品登録</a>
+</div>
+<div class="wrapper">
+    <table>
+        <tr>
+            <th>id</th>
+            <th>productName</th>
+            <th>price</th>
+            <th>releaseDate</th>
+            <th>imageUrl</th>
+        </tr>
+        <tr th:each="product : ${productList}">
+            <td>[[${product.id}]]</td>
+            <td><p>[[${product.productName}]]</p></td>
+            <td><p>[[${product.price}]]</p></td>
+            <td><p>[[${product.releaseDate}]]</p></td>
+            <td><img class="productImage" th:src="${product.imageUrl}"/>
+            <td>
+            <td><a href="http://localhost:8080/edit">詳細</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+
+</html>

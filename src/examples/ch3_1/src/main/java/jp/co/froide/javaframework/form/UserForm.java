@@ -5,6 +5,7 @@ import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 public class UserForm implements Serializable {
@@ -20,4 +21,9 @@ public class UserForm implements Serializable {
     @NotBlank
     private String passwordConfirm;
 
+    private Integer id;
+
+    private List userList;
+
+    private String checkbox;
 }

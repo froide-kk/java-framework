@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.seasar.doma.*;
 
+import java.util.Date;
+
 @Getter
 @Setter
 @Entity

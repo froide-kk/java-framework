@@ -1,0 +1,2 @@
+ip/co/froide/javaframework/JavaframeworkApplication.java
+ ip.co.froide.javaframework.JavaframeworkApplication

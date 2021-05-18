@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+
+    <style>
+        body{
+            margin:50px
+        }
+            table,tr,th,td{
+            border: 2px #000000 solid;
+        }
+        .createUser{
+            display: flex;
+            margin:30px;
+            justify-content: flex-end;
+        }
+        .wrapper{
+            display: flex;
+            justify-content: center;
+            flex-direction:column-reverse;
+        }
+    </style>
+</head>
+<body>
+<div class="createUser">
+    <a href="http://localhost:8080/create">登録はこちらから</a>
+</div>
+<div class="wrapper">
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>password</th>
+        </tr>
+        <tr th:each="user : ${userList}">
+            <td>[[${user.id}]]!</td>
+            <td><p>[[${user.name}]]</p></td>
+            <td><p>[[${user.password}]]</p></td>
+            <td><a href="http://localhost:8080/edit">詳細</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+
+</html>
