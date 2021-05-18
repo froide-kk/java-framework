@@ -5,19 +5,22 @@ import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 public class UserForm implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @NotBlank
-    @Length(min = 3, max = 5)
+    @Length(min = 1, max = 10)
     private String name;
 
     @NotBlank
-    private String password;
+    public String password;
 
     @NotBlank
-    private String passwordConfirm;
+    public String passwordConfirm;
+
+    private List userList;
 
 }

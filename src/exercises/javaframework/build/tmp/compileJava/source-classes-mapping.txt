@@ -1,0 +1,2 @@
+jp/co/froide/javaframework/JavaframeworkApplication.java
+ jp.co.froide.javaframework.JavaframeworkApplication

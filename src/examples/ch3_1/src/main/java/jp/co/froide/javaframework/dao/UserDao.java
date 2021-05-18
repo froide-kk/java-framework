@@ -34,4 +34,5 @@ public interface UserDao {
 
     @Delete
     int delete(User user);
+
 }
