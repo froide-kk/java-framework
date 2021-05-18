@@ -12,12 +12,12 @@ public class UserForm implements Serializable {
 
     @NotBlank
     @Length(min = 3, max = 5)
-    private String name;
+    public String name;
 
     @NotBlank
-    private String password;
+    public String password;
 
     @NotBlank
-    private String passwordConfirm;
+    public String passwordConfirm;
 
 }

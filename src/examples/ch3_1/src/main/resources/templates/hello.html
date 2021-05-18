@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+</head>
+<body>
+    <div>
+        Hello [[${name}]]!
+        [[${password}]]
+        [[${passwordConfirm}]]
+    </div>
+    <br>
+    <form th:object="${userForm}" th:action="${action}" id="form1" enctype="multipart/form-data" method="post">
+        <div>
+            <label>Name:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{name}" />
+            </div>
+            <label>Password:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{password}" />
+            </div>
+            <label>Password Confirm:</label>
+            <div>
+                <input type="text" th:type="text" th:field="*{passwordConfirm}">
+            </div>
+            <div>
+                <input type="submit" value="Send"/>
+            </div>
+        </div>
+    </form>
+<table>
+    <tr th:each="user : ${users}">
+        <td>id [[${user.id}]]</td>
+        <td>name [[${user.name}]]</td>
+        <td>password [[${user.password}]]</td>
+    </tr>
+</table>
+</body>
+</html>

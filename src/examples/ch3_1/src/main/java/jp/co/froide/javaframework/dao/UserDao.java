@@ -5,6 +5,7 @@ import org.seasar.doma.*;
 import org.seasar.doma.boot.ConfigAutowireable;
 import org.seasar.doma.jdbc.Config;
 import org.seasar.doma.jdbc.builder.SelectBuilder;
+import org.springframework.jdbc.support.CustomSQLErrorCodesTranslation;
 
 import java.util.List;
 
@@ -34,4 +35,5 @@ public interface UserDao {
 
     @Delete
     int delete(User user);
+
 }
