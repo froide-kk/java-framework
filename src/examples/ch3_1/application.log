@@ -5343,3 +5343,21 @@ java.lang.NullPointerException: null
 2021/05/18 17:18:43 INFO  [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2021/05/18 17:18:43 INFO  [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
 2021/05/18 17:18:43 INFO  [http-nio-8080-exec-1] - Completed initialization in 1 ms
+2021/05/18 20:15:14 INFO  [background-preinit] - HV000001: Hibernate Validator 6.1.7.Final
+2021/05/18 20:15:14 INFO  [main] - Starting Application using Java 11.0.11 on FNDM61.local with PID 13042 (/Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch3_1/build/classes/java/main started by rio-ikeda in /Users/rio-ikeda/Desktop/java-framework/java-framework/src/examples/ch3_1)
+2021/05/18 20:15:14 INFO  [main] - No active profile set, falling back to default profiles: default
+2021/05/18 20:15:16 INFO  [main] - Tomcat initialized with port(s): 8080 (http)
+2021/05/18 20:15:16 INFO  [main] - Initializing ProtocolHandler ["http-nio-8080"]
+2021/05/18 20:15:16 INFO  [main] - Starting service [Tomcat]
+2021/05/18 20:15:16 INFO  [main] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021/05/18 20:15:17 INFO  [main] - Initializing Spring embedded WebApplicationContext
+2021/05/18 20:15:17 INFO  [main] - Root WebApplicationContext: initialization completed in 2481 ms
+2021/05/18 20:15:17 INFO  [main] - Initializing ExecutorService 'applicationTaskExecutor'
+2021/05/18 20:15:18 INFO  [main] - HikariPool-1 - Starting...
+2021/05/18 20:15:19 INFO  [main] - HikariPool-1 - Start completed.
+2021/05/18 20:15:19 INFO  [main] - Starting ProtocolHandler ["http-nio-8080"]
+2021/05/18 20:15:19 INFO  [main] - Tomcat started on port(s): 8080 (http) with context path ''
+2021/05/18 20:15:19 INFO  [main] - Started Application in 11.263 seconds (JVM running for 12.079)
+2021/05/18 20:15:26 INFO  [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/05/18 20:15:26 INFO  [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2021/05/18 20:15:26 INFO  [http-nio-8080-exec-1] - Completed initialization in 2 ms
