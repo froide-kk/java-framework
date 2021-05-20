@@ -28,6 +28,7 @@ public class UserController {
     UserFormValidator userFormValidator;
 
 
+
     @InitBinder("userForm")
     public void validatorBinder(WebDataBinder webDataBinder) {
 
@@ -36,8 +37,8 @@ public class UserController {
 
     @GetMapping
     public String userList(Model model) throws IOException {
-        List<User> userlist = userDao.selectAll();
-        model.addAttribute("userlist", userlist);
+        List<User> userList = userDao.selectAll();
+        model.addAttribute("userList", userList);
         return "index";
     }
 
@@ -49,7 +50,7 @@ public class UserController {
     }
 
     @RequestMapping("index")
-    public ModelAndView dbList(ModelAndView modelAndView){
+    public ModelAndView dbList(ModelAndView modelAndView,Model model){
         modelAndView.addObject("userForm", new UserForm());
         modelAndView.setViewName("index");
         return modelAndView;
@@ -64,17 +65,21 @@ public class UserController {
         return "index";
     }
 
-    @PostMapping(params = "insert")
-    public String insetList(@Validated UserForm userForm, User user,BindingResult result, Model model) throws IOException {
+    @PostMapping(value = "insert",params = "insert")
+    public String insetList(@Validated @ModelAttribute("userForm") UserForm userForm, User user,BindingResult result, Model model) throws IOException {
         final ObjectMapper mapper = new ObjectMapper();
         final ObjectWriter writer = mapper.writer();
+        model.addAttribute("userForm", new UserForm());
+        if(result.hasErrors()){
+            return "insert";
+        }
         userDao.insert(user);
         String json = writer.writeValueAsString(userDao.selectById(user.getId()));
         model.addAttribute("insert", json+"が登録されました");
         return "insert";
     }
 
-    @PostMapping(params = "update")
+    @PostMapping(value = "update_delete",params = "update")
     public String upDateList(@Validated UserForm userForm, User user, Model model) throws IOException {
         final ObjectMapper mapper = new ObjectMapper();
         final ObjectWriter writer = mapper.writer();
@@ -84,7 +89,7 @@ public class UserController {
         return "index";
     }
 
-    @PostMapping(params = "delete")
+    @PostMapping(value = "update_delete",params = "delete")
     public String deleteList(@Validated UserForm userForm, User user,BindingResult result, Model model) throws IOException {
         final ObjectMapper mapper = new ObjectMapper();
         final ObjectWriter writer = mapper.writer();

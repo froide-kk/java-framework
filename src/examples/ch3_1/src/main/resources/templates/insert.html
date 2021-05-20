@@ -11,7 +11,7 @@
         <div>
             <div>名前</div>
             <input type="text" th:type="text" th:field="*{name}">
-            <div th:if="${#fields.hasErrors('name')}"></div>
+            <div th:each="error :${#fields.errors('name')}"><p th:text=“${error}“></p></div>
         </div>
         <div>
             <div>パスワード</div>
@@ -21,12 +21,19 @@
         <div>
             <div>パスワード再入力</div>
             <input type="text" th:type="text" th:field="*{passwordConfirm}"><br>
-            <div th:each="error : ${#fields.errors('passwordConfirm')}">[[${error}]]</div>
+            <div th:each="error : ${#fields.errors('passwordConfirm')}"></div>
         </div>
         <div>
             <input type="submit" th:type="submit" name="insert" value="登録">
         </div>
+        <table>
+            <tr th:each="user :${insertList}">
+                <td th:text="${user.id}"></td>
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.password}"></td>
+            </tr>
+        </table>
     </form>
-    <a href="index.html" th:href="@{/index}">DB一覧</a>
+    <a href="" th:href="@{/}">DB一覧</a>
 </body>
 </html>

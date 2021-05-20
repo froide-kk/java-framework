@@ -12,7 +12,6 @@ public class UserForm implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @NotBlank
-    @Length(min = 3, max = 5)
     private String name;
 
     @NotBlank
