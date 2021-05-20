@@ -1,0 +1,44 @@
+2021/05/19 09:36:10 INFO  [background-preinit] - HV000001: Hibernate Validator 6.1.7.Final
+2021/05/19 09:36:10 INFO  [main] - Starting Application using Java 11.0.7 on sueokaMacBook-Pro.local with PID 10974 (/Users/g-sueoka/git/training/java-framework/src/examples/ch4_1/build/classes/java/main started by g-sueoka in /Users/g-sueoka/git/training/java-framework/src/examples/ch4_1)
+2021/05/19 09:36:10 INFO  [main] - No active profile set, falling back to default profiles: default
+2021/05/19 09:36:11 INFO  [main] - Tomcat initialized with port(s): 8080 (http)
+2021/05/19 09:36:11 INFO  [main] - Initializing ProtocolHandler ["http-nio-8080"]
+2021/05/19 09:36:11 INFO  [main] - Starting service [Tomcat]
+2021/05/19 09:36:11 INFO  [main] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021/05/19 09:36:11 INFO  [main] - Initializing Spring embedded WebApplicationContext
+2021/05/19 09:36:11 INFO  [main] - Root WebApplicationContext: initialization completed in 903 ms
+2021/05/19 09:36:11 INFO  [main] - Initializing ExecutorService 'applicationTaskExecutor'
+2021/05/19 09:36:12 INFO  [main] - HikariPool-1 - Starting...
+2021/05/19 09:36:12 INFO  [main] - HikariPool-1 - Start completed.
+2021/05/19 09:36:12 INFO  [main] - Will secure Ant [pattern='/favicon.ico'] with []
+2021/05/19 09:36:12 INFO  [main] - Will secure Ant [pattern='/css/**'] with []
+2021/05/19 09:36:12 INFO  [main] - Will secure Ant [pattern='/js/**'] with []
+2021/05/19 09:36:12 INFO  [main] - Will secure Ant [pattern='/images/**'] with []
+2021/05/19 09:36:12 INFO  [main] - Will secure Ant [pattern='/fonts/**'] with []
+2021/05/19 09:36:12 INFO  [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2de3b052, org.springframework.security.web.context.SecurityContextPersistenceFilter@7a1371, org.springframework.security.web.header.HeaderWriterFilter@28367da7, org.springframework.security.web.csrf.CsrfFilter@44da7eb3, org.springframework.security.web.authentication.logout.LogoutFilter@7606bd03, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@743bb39a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c28181b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d70e9a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f3c8b60, org.springframework.security.web.session.SessionManagementFilter@3c60c681, org.springframework.security.web.access.ExceptionTranslationFilter@70c491b8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28bf82d9]
+2021/05/19 09:36:12 INFO  [main] - Starting ProtocolHandler ["http-nio-8080"]
+2021/05/19 09:36:12 WARN  [main] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2021/05/19 09:36:12 INFO  [main] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021/05/19 09:36:12 INFO  [main] - HikariPool-1 - Shutdown initiated...
+2021/05/19 09:36:12 INFO  [main] - HikariPool-1 - Shutdown completed.
+2021/05/19 09:36:12 INFO  [main] - Pausing ProtocolHandler ["http-nio-8080"]
+2021/05/19 09:36:12 INFO  [main] - Stopping service [Tomcat]
+2021/05/19 09:36:12 INFO  [main] - Stopping ProtocolHandler ["http-nio-8080"]
+2021/05/19 09:36:12 INFO  [main] - Destroying ProtocolHandler ["http-nio-8080"]
+2021/05/19 09:36:12 INFO  [main] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021/05/19 09:36:12 ERROR [main] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+

@@ -14,4 +14,3 @@ curl -X DELETE "http://localhost:8080/users/1"
 
 2. Domaを使用し、画面から登録・参照・更新・削除ができるように実装する
 - 名前検索
-
