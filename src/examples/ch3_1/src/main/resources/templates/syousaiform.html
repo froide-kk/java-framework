@@ -5,36 +5,54 @@
     <title>Title</title>
 </head>
 <body>
-<form th:object="${userForm}" th:action="${action}" id="form1" enctype="multipart/form-data" method="post">
-    <div>
-        <label>詳細</label>
-        <br>
-        <label>name</label>
-        <div>
-            <input type="text" th:type="text" th:field="*{name}" />
-            <ul th:each="error : ${#fields.errors('name')}">
-                <li th:text="${error}"></li>
-            </ul>
-        </div>
-        <label>password</label>
-        <div>
-            <input type="text" th:type="text" th:field="*{password}" />
-            <ul th:each="error : ${#fields.errors('password')}">
-                <li th:text="${error}"></li>
-            </ul>
-        </div>
-        <label>Password confirm</label>
-        <div>
-            <input type="text" th:type="text" th:field="*{passwordConfirm}" />
-            <ul th:each="error : ${#fields.errors('passwordConfirm')}">
-                <li th:text="${error}"></li>
-            </ul>
-        </div>
-        <div>
-            <input type="submit" value="Send"/>
-        </div>
-        <br>
-    </div>
-</form>
+<table>
+    <tr>
+        <th>id</th>
+        <th>名前</th>
+        <th>パスワード</th>
+        <th>詳細</th>
+    </tr>
+    <tr th:each="user : ${userList}">
+        <td>[[${user.id}]]</td>
+        <td>[[${user.name}]]</td>
+        <td>[[${user.password}]]</td>
+        <!--        <a th:each="syousai : ${userForm}" href="http://localhost:8080/users/syousai/{id}">ここを押すと1番目にとぶよ</a>-->
+        <td><button onclick="location.href='http://localhost:8080/users/syousai/1'">詳細</button></td>
+<!--        <td><button onclick=th:href="@{/users/syousai/1}">詳細</button></td>-->
+<!--        th:href="@{/user/profile(id=${'ab123'})}"-->
+
+    </tr>
+</table>
+<!--<form th:object="${userForm}" th:action="${action}" id="form1" enctype="multipart/form-data" method="post">-->
+<!--    <div>-->
+<!--        <label>詳細</label>-->
+<!--        <br>-->
+<!--        <label>name</label>-->
+<!--        <div>-->
+<!--            <input type="text" th:type="text" th:field="*{name}" />-->
+<!--            <ul th:each="error : ${#fields.errors('name')}">-->
+<!--                <li th:text="${error}"></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <label>password</label>-->
+<!--        <div>-->
+<!--            <input type="text" th:type="text" th:field="*{password}" />-->
+<!--            <ul th:each="error : ${#fields.errors('password')}">-->
+<!--                <li th:text="${error}"></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <label>Password confirm</label>-->
+<!--        <div>-->
+<!--            <input type="text" th:type="text" th:field="*{passwordConfirm}" />-->
+<!--            <ul th:each="error : ${#fields.errors('passwordConfirm')}">-->
+<!--                <li th:text="${error}"></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <input type="submit" value="Send"/>-->
+<!--        </div>-->
+<!--        <br>-->
+<!--    </div>-->
+<!--</form>-->
 </body>
 </html>

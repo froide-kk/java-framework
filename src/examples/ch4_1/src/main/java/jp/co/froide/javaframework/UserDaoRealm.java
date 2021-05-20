@@ -15,6 +15,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+//      実際の認証処置を行う
 @Component
 public class UserDaoRealm implements UserDetailsService {
     @Autowired
@@ -32,6 +33,7 @@ public class UserDaoRealm implements UserDetailsService {
                 throw new UsernameNotFoundException("no user found. [id=]" + name + "]");
             }
 
+//            ユーザテーブルと権限テーブルとそのひたつを紐付けるテーブル
             //役割キーにプレフィックスをつけてまとめる
             Set<String> roleKeys = new HashSet<>();
 

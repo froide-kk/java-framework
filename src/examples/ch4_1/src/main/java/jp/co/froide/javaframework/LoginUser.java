@@ -7,6 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 
 import java.util.Collection;
 
+//パスワードの認証
 @Getter
 @Setter
 public class LoginUser extends org.springframework.security.core.userdetails.User {

@@ -13,11 +13,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.sql.DataSource;
 
+//     セキュリティ設定　デフォルト設定を継承
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     DataSource dataSource;
 
+//    自作認証に差し替え
     @Autowired
     UserDetailsService userDetailsService;
 
@@ -26,17 +28,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
+//    デフォルトを上書き　暗号化用にパスワードをカスタマイズ
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
     }
 
+//    認証しないものの設定、静的なファイルには認証をかけない
     @Override
     public void configure(WebSecurity web) throws Exception {
         // 静的コンテンツには認証をかけない
         web.ignoring().antMatchers("/favicon.ico", "/css/**", "/js/**", "/images/**", "/fonts/**");
     }
 
+//    認証に使う名前とパスワードのパス設定
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()

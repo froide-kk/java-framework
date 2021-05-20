@@ -39,10 +39,20 @@ public class UserController {
     //    全件取得
     @GetMapping("users")
     public String userList(Model model) {
-        Collection<User> userDataList = userDao.selectAll();
-        model.addAttribute("userList",userDataList);
+//        Collection<User> userDataList = userDao.selectAll();
+        List<User> userDataList = userDao.selectAll();
+        model.addAttribute("userList", userDataList);
         return "userList";
     }
+
+//    追記 一件表示
+//    @GetMapping()
+//    public String syutoku(@PathVariable("userId") Integer userId, Model model) {
+//        User userData = userDao.selectById(userId);
+//        String name = userData.getName();
+//        model.addAttribute("name", name);
+//        return
+//    }
 
     //    Userの更新
     @PutMapping("users/syousai/{userId}")
@@ -68,7 +78,7 @@ public class UserController {
         return "syousaiform";
     }
 
-    //    詳細画面　一件取得
+//        詳細画面　一件取得
     @GetMapping("users/syousai/{userId}")
     public String syousai(@PathVariable("userId") Integer userId, Model model) {
         User userData = userDao.selectById(userId);
@@ -77,6 +87,22 @@ public class UserController {
         model.addAttribute("userForm", new UserForm());
         return "syousaiform";
     }
+
+//    user.idをuserDao.selectById()にセットする
+//    userIdとuser.idを紐付ける
+
+//    @GetMapping("users/syousai/{id}")
+//    public String syousai(@PathVariable Model model) {
+//        User userData = userDao.selectById(id);
+//        String name = userData.getName();
+//        model.addAttribute("name", name);
+//        model.addAttribute("userForm", new UserForm());
+//        return "syousaiform";
+//    }
+
+
+//    @RequestMapping(value="users/syousai/{userId}")
+
 
     //    登録画面　一件表示
     @GetMapping("users/touroku/{userId}")
@@ -110,5 +136,5 @@ public class UserController {
 
 //詳細のリンクに飛ぶと、一件だけ詳細が表示される
 
-
+//idごとに一件だけ取得するメソッドを作って「詳細画面　一件取得」で呼び出す
 
