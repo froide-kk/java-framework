@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+</head>
+<body>
+<!--
+<div>
+    Hello [[${name}]]!
+</div>
+<br>-->
+
+<h2 style="text-align:center; padding:10px">更新</h2>
+  <table align="center" style="border-collapse: collapse; width: 50%; table-layout: fixed;">
+    <tr>
+      <th style="border: solid 1px">id</th>
+      <th style="border: solid 1px">商品名</th>
+      <th style="border: solid 1px">価格</th>
+      <th style="border: solid 1px">発売日</th>
+      <th style="border: solid 1px">画像URL</th>
+    </tr>
+    <tr>
+      <td th:text="${item.id}" style="text-align: center; border: solid 1px;"></td>
+      <td th:text="${item.name}" style="text-align: center; border: solid 1px;"></td>
+      <td th:text="${item.price}" style="text-align: center; border: solid 1px;"></td>
+      <td th:text="${item.releaseDate}" style="text-align: center; border: solid 1px;"></td>
+      <td th:text="${item.imageUrl}" style="text-align: center; border: solid 1px;"></td>
+    </tr>
+  </table>
+
+  <form th:object="${itemForm}" th:action="@{/update/{id}(id=${item.id})}" id="form2" enctype="multipart/form-data" method="post" style="text-align:center; margin-top:20px">
+      <label>商品名</label>
+      <div>
+        <input type="text" th:type="text" th:field="*{name}" th:value="*{name}"/>
+        <ul th:each="error : ${#fields.errors('name')}" style="list-style: none; color:red">
+          <li th:text="${error}"></li>
+        </ul>
+      </div>
+      <br>
+      <label>価格</label>
+      <div>
+        <input type="number" th:type="number" th:field="*{price}" />
+        <ul th:each="error : ${#fields.errors('price')}" style="list-style: none; color:red">
+          <li th:text="${error}"></li>
+        </ul>
+      </div>
+      <br>
+      <label>発売日</label>
+      <div>
+        <input type="date" th:type="date" th:field="*{releaseDate}" />
+        <ul th:each="error : ${#fields.errors('releaseDate')}" style="list-style: none; color:red">
+          <li th:text="${error}"></li>
+        </ul>
+      </div>
+      <label>画像URL</label>
+      <div>
+        <input type="text" th:type="text" th:field="*{imageUrl}" />
+        <ul th:each="error : ${#fields.errors('imageUrl')}" style="list-style: none; color:red">
+          <li th:text="${error}"></li>
+        </ul>
+      </div>
+      <div>
+        <input type="submit" name="update" value="Send"/>
+      </div>
+  </form>
+<form th:action="@{/detail/{id}(id=${item.id})}" method="get">
+  <button>戻る</button>
+</form>
+
+</body>
+</html>
