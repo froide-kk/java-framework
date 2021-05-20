@@ -5,37 +5,20 @@
     <title>Hello World!</title>
 </head>
 <body>
-    <div>
-        Hello [[${name}]]!
-        [[${password}]]
-        [[${passwordConfirm}]]
-    </div>
-    <br>
-    <form th:object="${userForm}" th:action="${action}" id="form1" enctype="multipart/form-data" method="post">
-        <div>
-            <label>Name:</label>
-            <div>
-                <input type="text" th:type="text" th:field="*{name}" />
-            </div>
-            <label>Password:</label>
-            <div>
-                <input type="text" th:type="text" th:field="*{password}" />
-            </div>
-            <label>Password Confirm:</label>
-            <div>
-                <input type="text" th:type="text" th:field="*{passwordConfirm}">
-            </div>
-            <div>
-                <input type="submit" value="Send"/>
-            </div>
-        </div>
-    </form>
-<table>
+<div>
+    登録一覧
+</div>
+<table border="${users}">
     <tr th:each="user : ${users}">
-        <td>id [[${user.id}]]</td>
-        <td>name [[${user.name}]]</td>
-        <td>password [[${user.password}]]</td>
+        <th>id [[${user.id}]]</th>
+        <th>name [[${user.name}]]</th>
+        <th>password [[${user.password}]]</th>
     </tr>
 </table>
+<div>
+    <p><a href="http://localhost:8080/users/entry">登録</a></p>
+    <p><a href="http://localhost:8080/users/edit">編集</a></p>
+    <p><a href="http://localhost:8080/users/delete">削除</a></p>
+</div>
 </body>
 </html>

@@ -6,14 +6,22 @@
 </head>
 <body>
 <div>
-    削除画面
+    登録画面
 </div>
 <br>
 <form th:object="${userForm}" th:action="${action}" id="form1" enctype="multipart/form-data" method="post">
     <div>
-        <label>ID:</label>
+        <label>Name:</label>
         <div>
-            <input type="number" th:type="number" th:field="*{id}">
+            <input type="text" th:type="text" th:field="*{name}" />
+        </div>
+        <label>Password:</label>
+        <div>
+            <input type="text" th:type="text" th:field="*{password}" />
+        </div>
+        <label>Password Confirm:</label>
+        <div>
+            <input type="text" th:type="text" th:field="*{passwordConfirm}">
         </div>
         <div>
             <input type="submit" value="Send" />

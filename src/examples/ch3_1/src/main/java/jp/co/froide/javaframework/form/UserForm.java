@@ -20,4 +20,7 @@ public class UserForm implements Serializable {
     @NotBlank
     public String passwordConfirm;
 
+    @NotBlank
+    public Integer id;
+
 }
