@@ -43,14 +43,14 @@ public class UserController {
     }
 
     @RequestMapping("insert")
-    public ModelAndView insertUser(ModelAndView modelAndView){
+    public ModelAndView insertMove(ModelAndView modelAndView){
         modelAndView.addObject("userForm", new UserForm());
         modelAndView.setViewName("insert");
         return modelAndView;
     }
 
     @RequestMapping("index")
-    public ModelAndView dbList(ModelAndView modelAndView,Model model){
+    public ModelAndView indexMove (ModelAndView modelAndView,Model model){
         modelAndView.addObject("userForm", new UserForm());
         modelAndView.setViewName("index");
         return modelAndView;
