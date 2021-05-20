@@ -17,11 +17,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
 
 public class UserControllerTest {
-    @InjectMocks
-    UserController userController;
-
     @Mock
     UserDao userDaoMock;
+
+    @InjectMocks
+    UserController userController;
 
     @BeforeEach
     public void setUp() {
@@ -33,6 +33,7 @@ public class UserControllerTest {
         Mockito.when(userDaoMock.selectAll()).thenReturn(new ArrayList<User>());
         Mockito.when(userDaoMock.selectById(1)).thenReturn(new User());
         List<User> users = userController.userList();
+        Mockito.when(userController.userList()).
         assertThat(users.size(), is(0));
     }
 }
