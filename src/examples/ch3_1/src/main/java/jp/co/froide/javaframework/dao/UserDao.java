@@ -1,6 +1,7 @@
 package jp.co.froide.javaframework.dao;
 
 import jp.co.froide.javaframework.entity.User;
+import jp.co.froide.javaframework.entity.UserCsv;
 import org.seasar.doma.*;
 import org.seasar.doma.boot.ConfigAutowireable;
 import org.seasar.doma.jdbc.Config;
@@ -26,6 +27,7 @@ public interface UserDao {
     @Sql("select /*%expand*/* from user where id = /* id */0")
     @Select
     User selectById(Integer id);
+
 
     @Insert
     int insert(User user);

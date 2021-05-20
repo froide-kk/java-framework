@@ -17,7 +17,6 @@
             <td th:text="*{id}"></td>
             <td th:text="*{name}"></td>
             <td th:text="*{password}"></td>
-            <td ><a th:href="@{/users/detail/{id}(id=*{id})}">詳細表示</a></td>
             <td>
                 <a th:href="@{/users/update/{id}(id = *{id})}">更新する</a>
             </td>
@@ -29,5 +28,7 @@
         </tr>
     </table>
     <a th:href="@{/users/post}">新規登録</a>
+    <a th:href="@{/users/download/user.pdf}">一覧をpdfでダウンロード</a>
+    <a th:href="@{/users/download/user.csv}">一覧をcsvでダウンロード</a>
 </body>
 </html>
