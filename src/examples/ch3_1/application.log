@@ -1,0 +1,8 @@
+2021/05/20 07:45:04 WARN  [HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13h34m38s219ms).
+2021/05/20 08:59:01 WARN  [HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h13m57s47ms).
+2021/05/20 12:33:42 WARN  [HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m9s45ms).
+2021/05/20 12:34:11 WARN  [HikariPool-1 housekeeper] - HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s833ms), soft-evicting connections from pool.
+2021/05/20 12:59:14 WARN  [HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m3s521ms).
+2021/05/20 13:12:24 INFO  [SpringContextShutdownHook] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021/05/20 13:12:24 INFO  [SpringContextShutdownHook] - HikariPool-1 - Shutdown initiated...
+2021/05/20 13:12:24 INFO  [SpringContextShutdownHook] - HikariPool-1 - Shutdown completed.

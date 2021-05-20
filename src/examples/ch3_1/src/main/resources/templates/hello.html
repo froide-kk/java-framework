@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+</head>
+<body>
+<div>
+    登録一覧
+</div>
+<table border="${users}">
+    <tr th:each="user : ${users}">
+        <th>id [[${user.id}]]</th>
+        <th>name [[${user.name}]]</th>
+        <th>password [[${user.password}]]</th>
+    </tr>
+</table>
+<div>
+    <p><a href="http://localhost:8080/users/entry">登録</a></p>
+    <p><a href="http://localhost:8080/users/edit">編集</a></p>
+    <p><a href="http://localhost:8080/users/delete">削除</a></p>
+</div>
+</body>
+</html>

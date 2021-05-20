@@ -1,0 +1,2 @@
+jp/co/froide/javaframework/JavaframeworkApplicationTests.java
+ jp.co.froide.javaframework.JavaframeworkApplicationTests
