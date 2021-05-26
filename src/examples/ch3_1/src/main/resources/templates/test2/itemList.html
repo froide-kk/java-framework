@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>リスト</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>price</th>
+            <th>releaseDate</th>
+            <th>imageURL</th>
+            <th>更新フォーム</th>
+            <th>削除</th>
+        </tr>
+        <tr th:each="item:${itemList}" th:object="${item}">
+            <td th:text="*{id}"></td>
+            <td th:text="*{name}"></td>
+            <td th:text="*{price}"></td>
+            <td th:text="*{releaseDate}"></td>
+            <td th:text="*{imageURL}"></td>
+            <td>
+                <a th:href="@{/items/update/{id}(id = *{id})}">更新する</a>
+            </td>
+            <td>
+                <form th:action="@{/items/delete/{id}(id = *{id})}" method="post">
+                    <input type="submit" value="delete">
+                </form>
+            </td>
+        </tr>
+    </table>
+    <a th:href="@{/items/post}">新規登録</a>
+</body>
+</html>

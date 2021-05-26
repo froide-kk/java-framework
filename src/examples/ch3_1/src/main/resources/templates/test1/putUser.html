@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザー情報変更</title>
+</head>
+<body>
+<a th:href="@{/users/list}">キャンセル</a>
+<h3>現在のユーザー情報</h3>
+<table border="1" th:object="${user}">
+    <tr>
+        <td>id</td>
+        <td th:text="*{id}"></td>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td th:text="*{name}"></td>
+    </tr>
+    <tr>
+        <td>password</td>
+        <td th:text="*{password}"></td>
+    </tr>
+</table>
+<h3>新しいユーザー情報</h3>
+<form th:object="${form}" th:action="@{/users/update/{id}(id=${id})}" id="form1" enctype="multipart/form-data" method="post">
+    <table border="1">
+        <tr>
+            <td>name</td>
+            <td><input type="text" th:type="text" th:field="*{name}"></td>
+            <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Code Error</td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="text" th:type="text" th:field="*{password}"></td>
+            <td th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Code Error</td>
+        </tr>
+        <tr>
+            <td>password(確認用)</td>
+            <td><input type="text" th:type="text" th:field="*{passwordConfirm}"></td>
+            <td th:if="${#fields.hasErrors('passwordConfirm')}" th:errors="*{passwordConfirm}">Code Error</td>
+        </tr>
+    </table>
+    <input type="submit" value="update">
+</form>
+</body>
+</html>

@@ -1,0 +1,4 @@
+jp/co/froide/javaframework/Jsonadd.java
+ jp.co.froide.javaframework.Jsonadd
+jp/co/froide/javaframework/JavaframeworkApplication.java
+ jp.co.froide.javaframework.JavaframeworkApplication

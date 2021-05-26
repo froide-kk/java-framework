@@ -1,0 +1,27 @@
+2021/05/19 09:41:05 INFO  [background-preinit] - HV000001: Hibernate Validator 6.1.7.Final
+2021/05/19 09:41:05 INFO  [main] - Starting Application using Java 11.0.10 on FNDM35.local with PID 60261 (/Users/kazutoshi-asao/Documents/springBoot/java-framework/src/examples/ch4_1/build/classes/java/main started by kazutoshi-asao in /Users/kazutoshi-asao/Documents/springBoot/java-framework/src/examples/ch4_1)
+2021/05/19 09:41:05 INFO  [main] - No active profile set, falling back to default profiles: default
+2021/05/19 09:41:08 INFO  [main] - Tomcat initialized with port(s): 8080 (http)
+2021/05/19 09:41:08 INFO  [main] - Initializing ProtocolHandler ["http-nio-8080"]
+2021/05/19 09:41:08 INFO  [main] - Starting service [Tomcat]
+2021/05/19 09:41:08 INFO  [main] - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021/05/19 09:41:08 INFO  [main] - Initializing Spring embedded WebApplicationContext
+2021/05/19 09:41:08 INFO  [main] - Root WebApplicationContext: initialization completed in 3296 ms
+2021/05/19 09:41:09 INFO  [main] - Initializing ExecutorService 'applicationTaskExecutor'
+2021/05/19 09:41:10 INFO  [main] - HikariPool-1 - Starting...
+2021/05/19 09:41:11 INFO  [main] - HikariPool-1 - Start completed.
+2021/05/19 09:41:11 INFO  [main] - Will secure Ant [pattern='/favicon.ico'] with []
+2021/05/19 09:41:11 INFO  [main] - Will secure Ant [pattern='/css/**'] with []
+2021/05/19 09:41:11 INFO  [main] - Will secure Ant [pattern='/js/**'] with []
+2021/05/19 09:41:11 INFO  [main] - Will secure Ant [pattern='/images/**'] with []
+2021/05/19 09:41:11 INFO  [main] - Will secure Ant [pattern='/fonts/**'] with []
+2021/05/19 09:41:12 INFO  [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@464ede1f, org.springframework.security.web.context.SecurityContextPersistenceFilter@2fca3eb5, org.springframework.security.web.header.HeaderWriterFilter@2296127, org.springframework.security.web.csrf.CsrfFilter@26bb92e2, org.springframework.security.web.authentication.logout.LogoutFilter@64c8fcfb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@27bb4dc5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7cb29ea8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e37fb82, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64910b2d, org.springframework.security.web.session.SessionManagementFilter@1d283d1, org.springframework.security.web.access.ExceptionTranslationFilter@2b2a4332, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@dd737ea]
+2021/05/19 09:41:12 INFO  [main] - Starting ProtocolHandler ["http-nio-8080"]
+2021/05/19 09:41:12 INFO  [main] - Tomcat started on port(s): 8080 (http) with context path ''
+2021/05/19 09:41:12 INFO  [main] - Started Application in 8.465 seconds (JVM running for 9.334)
+2021/05/19 09:42:00 INFO  [http-nio-8080-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/05/19 09:42:00 INFO  [http-nio-8080-exec-1] - Initializing Servlet 'dispatcherServlet'
+2021/05/19 09:42:00 INFO  [http-nio-8080-exec-1] - Completed initialization in 2 ms
+2021/05/19 09:46:20 INFO  [SpringContextShutdownHook] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021/05/19 09:46:20 INFO  [SpringContextShutdownHook] - HikariPool-1 - Shutdown initiated...
+2021/05/19 09:46:20 INFO  [SpringContextShutdownHook] - HikariPool-1 - Shutdown completed.

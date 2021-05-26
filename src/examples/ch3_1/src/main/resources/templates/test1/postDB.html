@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/users/list}">キャンセル</a>
+<form th:object="${form}" th:action="@{/users/post}" id="form1" enctype="multipart/form-data" method="post">
+    <div>
+        名前：
+        <input type="text" th:type="text" name="name" th:field="*{name}">
+        <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Code Error</div>
+    </div>
+    <div>
+        パスワード：
+        <input type="text" th:type="text" name="pass" th:field="*{password}">
+        <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Code Error</div>
+    </div>
+    <div>
+        パスワード(確認用)：
+        <input type="text" th:type="text" name="passConf" th:field="*{passwordConfirm}">
+        <div th:if="${#fields.hasErrors('passwordConfirm')}" th:errors="*{passwordConfirm}">Code Error</div>
+    </div>
+    <div><input type="submit" value="Send" /></div>
+
+</form>
+
+
+</body>
+</html>

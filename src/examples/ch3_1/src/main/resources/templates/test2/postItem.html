@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>登録フォーム</title>
+</head>
+<body>
+<h1>商品の新規登録</h1>
+<a th:href="@{/items/list}">キャンセル</a>
+<form th:object="${form}" th:action="@{/items/post}" id="form1" enctype="multipart/form-data" method="post">
+    <div>
+        名前：
+        <input type="text" th:type="text" name="name" th:field="*{name}">
+        <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Code Error</div>
+    </div>
+    <div>
+        価格：
+        <input type="text" th:type="text" name="price" th:field="*{price}">
+        <div th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Code Error</div>
+    </div>
+    <div>
+        発売日：
+        <input type="date" th:type="date" name="releaseDate" th:field="*{releaseDate}">
+        <div th:if="${#fields.hasErrors('releaseDate')}" th:errors="*{releaseDate}">Code Error</div>
+    </div>
+    <div>
+        画像URL：
+        <input type="text" th:type="text" name="imageURL" th:field="*{imageURL}">
+        <div th:if="${#fields.hasErrors('imageURL')}" th:errors="*{imageURL}">Code Error</div>
+    </div>
+    <div><input type="submit" value="Send" /></div>
+
+</form>
+
+
+</body>
+</html>
