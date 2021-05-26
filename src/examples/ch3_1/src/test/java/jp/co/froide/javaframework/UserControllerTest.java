@@ -13,6 +13,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -21,7 +22,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 
 
 import org.springframework.ui.Model;
+import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.Validator;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.ArrayList;
@@ -32,10 +35,12 @@ import static org.hamcrest.CoreMatchers.*;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
-@RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 public class UserControllerTest {
     private MockMvc mockMvc;
+
+    @Autowired
+    Validator validator;
 
     @Mock
     UserDao userDaoMock;
@@ -49,7 +54,7 @@ public class UserControllerTest {
     RedirectAttributes ra;
 
     @InjectMocks
-    UserController userController;
+    UserController userController;a
 
     @BeforeEach
     public void serUp(){
