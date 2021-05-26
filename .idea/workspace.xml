@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d805074-a4d1-40e8-90c3-7ebfae1f773a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/ch3_1/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/ch3_1/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/ch3_1/src/test/java/jp/co/froide/javaframework/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/ch3_1/src/test/java/jp/co/froide/javaframework/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,5 +33,16 @@
       <updated>1620871278860</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
